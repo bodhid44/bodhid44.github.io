@@ -1,10 +1,28 @@
-.main.container {
-  margin-top: 7em;
+#bodhi-logo {
+  color: #880088;
+  font-weight: 700;
 }
-
 #profile-details{
   background-image: url('../images/zen-circle-alpha.png');
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: bottom; 
   height:350px;
+}
+
+#profile-portfolio-divider{
+  padding-top: 12rem;
+}
+@media screen and (min-width: 768px) {
+  #profile-portfolio-divider{
+    padding-top: 1rem;
+  }
+}
+
+#pagefooter{
+  background-color: #880088;
+  color: white;
+}
+
+#thanks{
+  color: #bbbbbb;
 }
