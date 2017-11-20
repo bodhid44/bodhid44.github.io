@@ -1,0 +1,21 @@
+@media screen and (min-width: 768px) {
+  h1 {
+    margin-top: 4rem !important;
+  }
+}
+#quote-segment{
+  background-color: cornsilk;
+}
+#quotation {
+  font-size: 2rem;
+  font-family: 'Courgette', cursive;
+}
+#quotation > p > span {
+  color: red;
+}
+#attribution {
+  font-style: italic;
+}
+#attribution.red, #length-warning {
+  color: red;
+}

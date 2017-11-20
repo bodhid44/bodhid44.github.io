@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>freeCodeCamp - Random Quote Machine </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./rqm.css" >
+
+  </head>
+
+  <body>
+
+    <h1 class="ui center aligned icon header">
+      <i class="comments outline icon"></i>
+      Random Quote Machine
+    </h1>
+
+
+    <div class="stackable ui center aligned grid container">
+      <div class="row">
+        <div class="sixteen wide column">
+
+          <div id="quote-segment" class="ui raised segment">
+
+            <div id="quotation" class="ui basic segment">Waiting for quote to be delivered ....</div>
+            <div class="ui right aligned basic segment" ><p id="attribution">Random Quote Machine</p></div>
+
+          </div>
+          <div class="ui basic segment">
+            <p><em id="length-warning">*Will be omitted from tweet as too long!</em></p>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="eight wide column">
+          <button id="button-new-quote" class="ui positive basic button">New Quote</button>
+        </div>
+        <div class="eight wide column">
+          <div class="ui statistic">
+            <div class="value">
+              <i id="b-empty" class="battery empty icon"></i> 
+              <i id="b-low" class="red battery low icon"></i>
+              <i id="b-medium" class="orange battery medium icon"></i>
+              <i id="b-high" class="green battery high icon"></i>
+              <i id="b-full" class="green battery full icon"></i>
+              <span id="quotes-buffered">0</span>
+            </div>
+            <div class="label">
+              Quote buffer
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="twitter-div" class="sixteen wide column">
+
+          <a id="twitter-share" href="#" target="_blank">
+            <button id="tweet-button" class="ui twitter button"><i class="twitter icon"></i>
+              Tweet this quote
+            </button>
+          </a>
+
+          <div class="content">
+            Maximum tweet character length: 
+            <div id="tweet-length" class="ui inline dropdown">
+              <div class="text">140</div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="header">Tweet length</div>
+                <div class="active item" data-text="140">140</div>
+                <div class="item" data-text="280">280</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="sixteen wide column">
+          <div class="ui compact purple mini message">
+            <em>Powered by forismatic.com</em>
+          </div>
+          <div class="">
+            <em>Includes small quote buffer to partially mitigate the delay in retrieving quotes</em>
+            <img src="../images/Bodhi50-purple-trans.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+  <script src="./rqm.js"></script>
+</html>
