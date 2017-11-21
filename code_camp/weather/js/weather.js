@@ -99,12 +99,12 @@
 
     loc.clouds = data.weather[0].description + ' (' +data.clouds.all + "%)";
     loc.weather = data.weather[0].main;
-    loc.tempUnits = tempUnits;
-    if (loc.tempUnits === "°C") {
+    if (tempUnits === "°C") {
       loc.temperature = Math.round(data.main.temp);
     } else {
       loc.temperature = Math.round((data.main.temp * 1.8) + 32);
     }
+    loc.temperature += tempUnits;
     sunrise = new Date(data.sys.sunrise * 1000);
     sunset = new Date(data.sys.sunset * 1000);
     if (now > sunrise && now < sunset){
@@ -116,11 +116,9 @@
     loc.sunrise = sunrise.toLocaleTimeString();
     loc.sunset = sunset.toLocaleTimeString();
     loc.humidity = data.main.humidity+ "%";
-    loc.wind = data.wind.speed + 'm/s'; //data.wind.deg + '° ';
+    loc.wind = data.wind.speed + 'm/s'; 
     loc.windIcon = 'wi wi-wind from-' + data.wind.deg + '-deg';
     $(segTemplate.map(render(loc)).join('')).appendTo('#main-container');
-    //addedMap = $(segTemplate.map(render(loc)).join('')).appendTo('#main-container').find('.map');
-    //initMap(addedMap, loc);
     $('#action-msg').hide();
   }
 
@@ -202,8 +200,28 @@
   });
   
   $('#add-weather').on('click', function(){
-    var location = createLocation(cities[$('.ui.dropdown').dropdown('get value')]);
+    var location = createLocation(cities[$('.ui.dropdown.location').dropdown('get value')]);
     getWeather(location);
+  });
+  
+  $('#set-temp-units').on('click', function(){
+    var units = $(this).text(), convert;
+    if (units === tempUnits){
+      return;
+    }
+    if (units === '°F') {
+      convert = function(temp) { return Math.round((temp * 1.8) + 32); };
+    } else {
+      convert = function(temp) { return Math.round((temp - 32) * 5 / 9); };
+    }
+    $('.temperature').each( function() {
+      var temp = $(this).text();
+      temp = temp.substr(0, temp.indexOf('°'));
+      $(this).text( convert(temp) + units);
+    });
+    $(this).html('<i class="right arrow icon"></i>' + tempUnits);
+    tempUnits = units;
+    
   });
 
 }(jQuery));

@@ -2,16 +2,16 @@
   margin-top: 1rem;
 }
 .ui.left.floated.raised.segment {
-  min-width: 360px !important;
+  min-width: 340px !important;
 }
 @media screen and (min-width: 768px) {
   #main-container {
     padding-top: 3rem !important;
   }
-}
-.map {
-  width: 300px;
-  height: 300px;
+  .ui.left.floated.raised.segment {
+    min-width: 350px !important;
+    min-height: 440px !important;
+  }
 }
 .wi{
   font-size: 30px !important;
