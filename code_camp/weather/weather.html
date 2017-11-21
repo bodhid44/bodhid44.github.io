@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fCC - Local Weather</title>
+
+    <link rel="stylesheet" href="./css/weather-icons.min.css">
+    <link rel="stylesheet" href="./css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/weather.css" >
+  </head>
+
+  <body>
+    <div id="main-container" class="stackable ui center aligned container">
+      <!-- Header -->
+      <h1 class="ui header">
+        <img src="images/satellite_250.jpg">
+        <div class="content">
+          Your Local Weather
+          <div class="sub header">data supplied by OpenWeatherMap</div>
+        </div>
+      </h1>
+      <!-- Messages -->
+      <!-- action -->
+      <div id="action-msg" class="ui yellow compact icon message">
+        <i class="notched circle loading icon"></i>
+        <div class="content">
+          <div class="header">
+            Please wait
+          </div>
+          <p id="action-text">We're attempting to get your location.</p>
+        </div>
+      </div>
+      <!-- failure-->
+      <div id="failed-msg"  class="ui icon red message">
+        <i class="warning sign icon"></i>
+        <div class="content">
+          <div class="header">
+            We're Sorry
+          </div>
+          <p id="failure-text">We can't seem to find your location.</p>
+        </div>
+      </div>
+
+
+      <div class="ui basic segment">
+        <button id="add-weather" class="ui primary button">
+          <i class="plus icon"></i>
+          Add weather for
+        </button>
+        <div class="ui dropdown">
+          <div class="text"></div>
+          <i class="dropdown icon"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/template" data-template="weathersegment">
+      <div class="ui left floated raised segment">
+        <h2 class="ui header">${description}
+          <div class="sub header">${latLonDisplay}</div>
+      </h2>
+        <div class="left aligned content">
+          <table class="ui striped celled large table">
+            <tbody>
+              <tr>
+                <td>${weather}</td>
+                <td><i class="${weatherIcon}"></i></td>
+      </tr>
+              <tr>
+                <td>Cloudiness</td>
+                <td>${clouds}</td>
+      </tr>
+              <tr>
+                <td>Temperature</td>
+                <td class="temperature">${temperature}<span class="tempUnits">${tempUnits}</span></td>
+      </tr><tr>
+              <td>Humidity</td>
+              <td>${humidity}</td>
+      </tr>
+              <tr>
+                <td>Wind</td>
+                <td>${wind} <i class="${windIcon}"></i></td>
+      </tr>
+              <tr>
+                <td>Sunrise</td>
+                <td>${sunrise}</td>
+      </tr>
+              <tr>
+                <td>Sunset</td>
+                <td>${sunset}</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      </div>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+
+    <script src="./js/weather.js"></script>
+  </body>
+</html>
