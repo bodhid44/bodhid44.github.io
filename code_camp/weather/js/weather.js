@@ -177,9 +177,10 @@
       getWeather(location);
     }
 
-    function error() {
+    function error(err) {
       $('#failed-msg').show();
       $('#action-msg').hide();
+      console.log(`ERROR(${err.code}): ${err.message}`);
     }
 
     navigator.geolocation.getCurrentPosition(success, error);
