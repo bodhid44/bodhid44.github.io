@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fCC - Twitch TV</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./twitchtv.css" >
+  </head>
+
+  <body>
+    <div id="main-container" class="ui left aligned container">
+
+      <div class="ui basic segment">
+        
+      </div>
+
+
+      <div class="ui compact left aligned segment"> <!-- basic -->
+        <h4 class="ui header">
+          <i class="settings icon"></i>
+          <div class="content">
+            Settings
+          </div>
+        </h4>
+
+        <div class="ui form">
+          <div class="inline fields">
+            <label>Filter channels?</label>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input name="filter" checked="checked" type="radio" value="all">
+                <label>All</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input name="filter" type="radio" value="online">
+                <label><i class="check circle outline green icon"></i>&nbsp;Online</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input name="filter" type="radio" value="offline">
+                <label><i class="remove circle outline red icon"></i>&nbsp;Offline</label>
+              </div>
+            </div>
+            <button class="ui primary icon button" title="Refresh">
+              <i class="refresh icon"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="items-div" class="ui divided items">
+
+      </div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+
+    <script src="./twitchtv.js"></script>
+  </body>
+</html>
