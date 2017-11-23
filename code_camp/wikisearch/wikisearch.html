@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fCC - Wikipedia Search</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./wikisearch.css" >
+  </head>
+
+  <body>
+    <div id="main-container" class="ui center aligned container">
+      <div class="ui raised segments">
+
+        <div id="h2-segment" class="ui segment">
+          <h2 class="ui center aligned icon header">
+            <i class="circular find icon"></i>
+            Wikipedia Viewer
+          </h2>
+        </div>
+
+        <div class="ui segment">
+          <div class="ui left aligned search">
+            <div class="ui icon input">
+              <input class="prompt" placeholder="Enter your search text ..." type="text">
+              <i class="search icon"></i>
+            </div>
+            <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" title="Random Wikipedia Page">
+              <button class="ui primary icon button"><i class="wikipedia icon"></i>&nbsp;<i class="random icon"></i></button>
+            </a>
+            <div class="results"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+
+    <script src="./wikisearch.js"></script>
+  </body>
+</html>

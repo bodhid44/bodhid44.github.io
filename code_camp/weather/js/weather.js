@@ -183,7 +183,7 @@
       console.log(`ERROR(${err.code}): ${err.message}`);
     }
 
-    navigator.geolocation.getCurrentPosition(success, error);
+    navigator.geolocation.getCurrentPosition(success, error, {timeout:10000});
   }
 
   getLocation();

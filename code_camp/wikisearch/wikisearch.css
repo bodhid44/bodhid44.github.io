@@ -1,0 +1,17 @@
+@media screen and (min-width: 768px) {
+  #main-container {
+    margin-top: 4rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main-container {
+    margin-top: 0.5rem !important;
+  }
+  #h2-segment {
+    display: none;
+  }
+}
+
+#main-container{
+  max-width: 800px !important;
+}
