@@ -14,12 +14,13 @@
   <body>
     <div id="main-container" class="ui left aligned container">
 
-      <div class="ui basic segment">
-        
+      <div class="ui basic center aligned segment">
+        <h2 class="ui center aligned icon header">
+          <i class="circular twitch icon"></i>
+          Twitchtv Streams
+        </h2>
       </div>
-
-
-      <div class="ui compact left aligned segment"> <!-- basic -->
+      <div class="ui left aligned segment"> <!-- basic -->
         <h4 class="ui header">
           <i class="settings icon"></i>
           <div class="content">
@@ -29,7 +30,6 @@
 
         <div class="ui form">
           <div class="inline fields">
-            <label>Filter channels?</label>
             <div class="field">
               <div class="ui radio checkbox">
                 <input name="filter" checked="checked" type="radio" value="all">
@@ -39,30 +39,33 @@
             <div class="field">
               <div class="ui radio checkbox">
                 <input name="filter" type="radio" value="online">
-                <label><i class="check circle outline green icon"></i>&nbsp;Online</label>
+                <label><i class="check circle outline green icon"></i>Online</label>
               </div>
             </div>
             <div class="field">
               <div class="ui radio checkbox">
                 <input name="filter" type="radio" value="offline">
-                <label><i class="remove circle outline red icon"></i>&nbsp;Offline</label>
+                <label><i class="remove circle outline red icon"></i>Offline</label>
               </div>
             </div>
-            <button class="ui primary icon button" title="Refresh">
-              <i class="refresh icon"></i>
+            <button id="refresh-button" class="ui primary icon button" title="Refresh">
+              <i id="twitch-button-icon" class="twitch icon"></i><i class="refresh icon"></i>
             </button>
+
+
+            <div id="add-channel-div" class="four wide field">
+              <input id="add-channel-name" name="channel-name" placeholder="Channel name ..." type="text">
+            </div>
+            <button id="add-channel-button" class="ui primary icon button" title="Add Channel">
+              <i id="twitch-button-icon" class="twitch icon"></i><i class="add circle icon"></i>
+            </button>
+
           </div>
         </div>
-
       </div>
-
-      <div id="items-div" class="ui divided items">
-
+      <div id="items-div" class="ui divided link items">
       </div>
-
     </div>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
 

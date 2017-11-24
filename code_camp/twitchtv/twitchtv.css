@@ -12,11 +12,33 @@
   background-color: #fff7f7 !important;
   padding-top: 6px !important;
 }
+.ui.checkbox .box, .ui.checkbox label{
+  padding-left: 16px !important;
+}
 button.ui.primary.icon.button {
   margin-left: 25px;
+}
+#twitch-button-icon {
+  margin-right: 10px !important;
+}
+@media screen and (max-width: 768px) {
+  button.ui.primary.icon.button {
+    margin-left: 90px !important;
+    margin-top: 20px !important;
+  }
+  #add-channel-div {
+    margin-top: 30px !important;
+  }
 }
 @media screen and (min-width: 768px) {
   #main-container {
     margin-top: 2rem !important;
+  }
+  #add-channel-div {
+    margin-left: 60px !important;
+    margin-right: 0 !important;
+  }
+  #add-channel-button, #refresh-button {
+    margin-left: 0 !important;
   }
 }
