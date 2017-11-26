@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fCC - Tic Tac Toe</title>
+
+    <!--SEMANTIC UI-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+    <!--LOCAL CSS-->
+    <link rel="stylesheet" type="text/css" href="./ttt.css" >
+  </head>
+
+  <body>
+    <div id="main-container" class="ui container">
+
+      <h2 class="ui center aligned icon header">
+        <i class="hashtag icon"></i>
+        <div class="content">
+          Noughts and Crosses
+          <div class="sub header"><em>(Tic-tac-toe)</em></div>
+        </div>
+      </h2>
+
+      <div id="options-div" class="ui compact segment">
+        <div>
+          <button id="new-game" class="ui primary tiny button">New Game</button>
+          <span data-tooltip="Applies on new game" >Computer level: </span>
+          <div id="computer-level" class="ui inline dropdown">
+            <div class="text"></div>
+            <i class="dropdown icon"></i>
+          </div>
+          <strong>Score: </strong><i class="blue user icon"></i><span id="human-score">0</span> <i class="purple laptop icon"></i><span id="computer-score">0</span></div>
+      </div>
+
+      <h4 id="computer-turn" class="ui center aligned header">
+        <div class="content">
+          <i class="large purple laptop icon"></i> Computer's Turn
+        </div>
+      </h4>
+      <h4 id="human-turn" class="ui center aligned  header">
+        <div class="content">
+          <i class="large blue user icon"></i> Your Turn
+        </div>
+      </h4>
+
+      <table>
+        <tbody>
+          <tr>
+            <td id="r0c0" class="r0 c0"></td>
+            <td id="r0c1" class="left right r0 c1" ></td>
+            <td id="r0c2" class="r0 c2"></td>
+          </tr>
+          <tr>
+            <td id="r1c0" class="top bottom r1 c0"></td>
+            <td id="r1c1" class="left right top bottom r1 c1"></td>
+            <td id="r1c2" class="top bottom r1 c2"></td>
+          </tr>
+          <tr>
+            <td id="r2c0" class="r2 c0"></td>
+            <td id="r2c1" class="left right r2 c1"></td>
+            <td id="r2c2" class="r2 c2"></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+      <div id="new-game-modal" class="ui small modal">
+        <div class="ui icon header">
+          <i class="purple laptop icon"></i>
+          Concede Current Game
+        </div>
+        <div class="content">
+          <p>There's a game in progress. Do you want to concede this game to the computer?</p>
+        </div>
+        <div class="actions">
+          <div class="ui red basic cancel button">
+            <i class="remove icon"></i>
+            No
+          </div>
+          <div class="ui green ok button">
+            <i class="laptop icon"></i>
+            Yes
+          </div>
+        </div>
+      </div>
+
+      <div id="after-load-modal" class="ui small modal">
+        <div class="ui icon header">
+          <i class="user icon"></i>
+          Select Your Side
+        </div>
+        <div class="content">
+          <p>Which Side Do you Want? <em>(X starts first game.)</em></p>
+        </div>
+        <div class="actions">
+          <div class="ui ok x button">
+            <div class="image content">
+              <img class="ui image" src="../images/cross.png">
+            </div>
+          </div>
+          <div class="ui ok o button">
+            <div class="image content">
+              <img class="ui image" src="../images/nought.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="computer-win" class="ui small modal">
+        <div class="ui icon header">
+          <i class="purple laptop icon"></i>
+          Computer Won!
+          <i class="purple trophy icon"></i>
+        </div>
+        <div class="content">
+          <p>You lost. Better luck next time.</p>
+        </div>
+      </div>
+      
+      <div id="human-win" class="ui small modal">
+        <div class="ui icon header">
+          <i class="blue user icon"></i>
+          Congratulations: You Won!
+          <i class="blue trophy icon"></i>
+        </div>
+        <div class="content">
+          <p>Humanity triumphs again.</p>
+        </div>
+      </div>
+      
+      <div id="drawn-game" class="ui small modal">
+        <div class="ui icon header">
+          <i class="blue user icon"></i>
+          Drawn game
+          <i class="purple laptop icon"></i>
+        </div>
+        <div class="content">
+          <p>I'm sure you can win the next game.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--    SEMANTIC UI-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <!--LOCAL JS-->
+    <script src="./ttt.js"></script>
+  </body>
+</html>

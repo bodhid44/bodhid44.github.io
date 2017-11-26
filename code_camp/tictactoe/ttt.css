@@ -1,0 +1,52 @@
+.winner {
+  background-color: #c0ffc0;
+}
+
+td{
+  background-position: center center;
+  background-repeat:no-repeat;
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  margin: 25px 0;
+  text-align: center;
+}
+
+.gamebox{
+  float: left;
+  height: 100%;
+  width:19%;
+}
+
+.row{
+  clear: both;
+  height: 100px;
+  width: 100%;
+}
+
+.top{
+  border-top: 5px solid gray;
+}
+.bottom{
+  border-bottom: 5px solid gray;
+}
+.right{
+  border-right: 5px solid gray;
+}
+.left{
+  border-left: 5px solid gray;
+}
+
+table{
+  border-collapse: collapse;
+  margin: 50px auto;
+}
+td{
+  height: 120px;
+  text-align: center;
+  width: 120px;
+}

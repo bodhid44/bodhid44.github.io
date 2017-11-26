@@ -30,10 +30,10 @@
       },
       url: '//en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&generator=prefixsearch&prop=pageprops|pageimages|pageterms&redirects=&ppprop=displaytitle&piprop=thumbnail&pithumbsize=80&pilimit=6&wbptterms=description&gpssearch={query}&gpsnamespace=0&gpslimit=6&origin=*'
     },
-    onSelect: function(result, response) {
+    onSelect: function() {
       return false;
     },
-    onResultsAdd: function(html) {
+    onResultsAdd: function() {
       $('a.result').attr('target', '_blank');
     }
   });
