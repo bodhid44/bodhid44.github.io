@@ -50,3 +50,12 @@ td{
   text-align: center;
   width: 120px;
 }
+@media (min-width: 768px) {
+  #top-header{
+    margin-top: 50px;
+  }
+  #options-div > div{
+    display: inline;
+    margin-right: 30px;
+  }
+}

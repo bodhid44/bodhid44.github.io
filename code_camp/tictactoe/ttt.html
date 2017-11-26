@@ -12,9 +12,9 @@
   </head>
 
   <body>
-    <div id="main-container" class="ui container">
+    <div id="main-container" class="ui center aligned container">
 
-      <h2 class="ui center aligned icon header">
+      <h2 id="top-header" class="ui icon header">
         <i class="hashtag icon"></i>
         <div class="content">
           Noughts and Crosses
@@ -22,15 +22,18 @@
         </div>
       </h2>
 
-      <div id="options-div" class="ui compact segment">
+      <div id="options-div" class="ui center aligned basic segment">
         <div>
           <button id="new-game" class="ui primary tiny button">New Game</button>
-          <span data-tooltip="Applies on new game" >Computer level: </span>
-          <div id="computer-level" class="ui inline dropdown">
-            <div class="text"></div>
-            <i class="dropdown icon"></i>
-          </div>
-          <strong>Score: </strong><i class="blue user icon"></i><span id="human-score">0</span> <i class="purple laptop icon"></i><span id="computer-score">0</span></div>
+        </div>
+        <span data-tooltip="Applies on new game" >Computer level: </span>
+        <div id="computer-level" class="ui inline dropdown">
+          <div class="text"></div>
+          <i class="dropdown icon"></i>
+        </div>
+        <div>
+          <strong>Score: </strong><i class="blue user icon"></i><span id="human-score">0</span> <i class="purple laptop icon"></i><span id="computer-score">0</span>
+        </div>
       </div>
 
       <h4 id="computer-turn" class="ui center aligned header">
@@ -107,7 +110,7 @@
           </div>
         </div>
       </div>
-      
+
       <div id="computer-win" class="ui small modal">
         <div class="ui icon header">
           <i class="purple laptop icon"></i>
@@ -115,10 +118,10 @@
           <i class="purple trophy icon"></i>
         </div>
         <div class="content">
-          <p>You lost. Better luck next time.</p>
+          <p>That's it, man. Game over, man. Game over!</p>
         </div>
       </div>
-      
+
       <div id="human-win" class="ui small modal">
         <div class="ui icon header">
           <i class="blue user icon"></i>
@@ -129,7 +132,7 @@
           <p>Humanity triumphs again.</p>
         </div>
       </div>
-      
+
       <div id="drawn-game" class="ui small modal">
         <div class="ui icon header">
           <i class="blue user icon"></i>
