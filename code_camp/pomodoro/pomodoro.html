@@ -6,20 +6,121 @@
     <title>fCC - Pomodoro</title>
 
     <!--SEMANTIC UI-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">-->
     <!--LOCAL CSS-->
-    <link rel="stylesheet" type="text/css" href="./pomodoro.css" >
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="./pomodoro.css" >
   </head>
 
   <body>
-    <div id="main-container" class="ui container">
-    
+    <p class="grid-message">You need a browser that supports CSS Grid Layout to see this page properly!</p>
+    <div class="grid" >
+      <div class="clock">
+        <div id="clock-type" class="label">
+          Pomodoro
+        </div>
+        <div id="clock-body">
+          <div id="clock-face">
+            25:00
+          </div>
+          <div id="clock-footer">
+            <div id="pomodoro-count-in-group"></div>
+            <div id="clock-reset">RESET</div>
+          </div>
+        </div>
+      </div>
+      <div class="time-setting pomodoro">
+        <div id="pomodoro-label" class="label">
+          Pomodoro (mins)
+        </div>
+        <div class="pomodoro value">
+          <a class="increase enabled">
+            <i class="fa fa-plus-square fa-1x enabled" aria-hidden="true"></i></a>
+          <span id="pomodoroLength" >25</span>
+          <a class="decrease enabled">
+            <i class="fa fa-minus-square fa-1x enabled" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="time-setting break">
+        <div id="break-label" class="label">
+          Break (mins)
+        </div>
+        <div class="break value">
+          <a class="increase enabled">
+            <i class="fa fa-plus-square fa-1x enabled" aria-hidden="true"></i>
+          </a>
+          <span id="breakLength" >5</span>
+          <a class="decrease enabled">
+            <i class="fa fa-minus-square fa-1x enabled" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+
+
+
+      <!--
+<div id="main-container" class="ui center aligned container">
+
+<div class="setting ui icon compact menu break">
+<a id="decrease-break" class="item decrease" >
+<i class="large red minus square outline icon"></i>
+</a>
+<div class="ui small statistic item">
+<div id="break-label" class="label">
+Break (mins)
+</div>
+<div id="breakLength" class="value">
+5
+</div>
+</div>
+<a id="increase-break" class="item increase">
+<i class="large green plus square outline icon"></i>
+</a>
+</div>
+
+<div class="setting ui icon compact menu pomodoro">
+<a id="decrease-pomodoro" class="item decrease">
+<i class="huge red minus square outline icon"></i>
+</a>
+<div class="ui item small statistic">
+<div id="pomodoro-label" class="label">
+Pomodoro (mins)
+</div>
+<div id="pomodoroLength" class="value">
+25
+</div>
+</div>
+<a id="increase-pomodoro" class="item increase">
+<i class="huge green plus square outline icon"></i>
+</a>
+</div>
+
+
+<div class="ui center aligned basic segment">
+
+<div class="ui huge statistic" data-tooltip="Click to start/pause">
+<div id="clock-type" class="label">
+Pomodoro
+</div>
+<div id="clock" id="pomodoroLength" class="value">
+25:00
+</div>
+</div>
+
+</div>
+-->
+
+
     </div>
 
+    <audio id="alarm" src="../images/ship-bell.mp3"></audio>
     <!--jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--    SEMANTIC UI-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>-->
     <!--LOCAL JS-->
     <script src="./pomodoro.js"></script>
   </body>

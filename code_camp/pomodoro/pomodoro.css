@@ -1,0 +1,155 @@
+* { box-sizing: border-box;}
+body {
+  font-family: 'Lato', sans-serif;
+}
+@supports(display: grid){
+  .grid-message {
+    display: none;
+  }
+}
+.grid-message {
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 12px;
+  margin: auto;
+  justify-items: center;
+}
+@media screen and (min-width: 640px) {
+  .grid {
+    grid-template-columns: 250px 250px;
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
+  }
+  .grid .clock {
+    grid-column: 1 /3;
+    grid-row: 1;
+  }
+  .grid .time-setting.pomodoro {
+    grid-row: 2;
+    justify-self: end;
+  }
+  .grid .time-setting.break {
+    grid-row: 2;
+    justify-self: start;
+  }
+}
+.grid .clock {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  cursor: pointer;
+  width: 220px;
+  justify-self: center;
+}
+.grid .time-setting {
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 170px;
+}
+.grid .time-setting div{
+  display: flex;
+  justify-content: center;
+}
+.time-setting .label {
+  max-width: 200px;
+  margin: auto;
+  font-size: 1.2rem;
+  padding: 5px;
+  color: #fff;
+  border-top: 2px solid #ccc;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.time-setting .value{
+  background-color: #ececec;
+  font-size: 2rem;
+  padding: 5px 0 10px 0;
+  border-bottom: 2px solid #ccc;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.time-setting .value span{
+  font-size: 2rem;
+  padding: 0 10px;
+}
+.time-setting a.enabled {
+  cursor: pointer;
+}
+.time-setting a {
+  cursor: not-allowed;
+}
+.time-setting .fa {
+  padding-top: 5px;
+}
+
+.fa-plus-square.enabled{
+  color: green;
+}
+.fa-minus-square.enabled{
+  color: red;
+}
+
+#clock-type{
+  border-left: 4px solid #ccc;
+  border-right: 4px solid #ccc;
+  border-top: 4px solid #ccc;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #ddd;
+  padding: 5px;
+  font-weight: 700;
+}
+#clock-body {
+  background-color: #eee;
+  border-left: 4px solid #ccc;
+  border-right: 4px solid #ccc;
+  border-bottom: 4px solid #ccc;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#clock-face {
+  font-size: 4rem;
+  padding: 15px;
+  text-align: center;
+}
+#clock-footer{
+  cursor: default;
+}
+#clock-reset{
+  font-size: 0.8rem;
+  color: #444;
+  background-color: #bbb;
+  border: 1px solid #444;
+  padding: 4px;
+  text-align: center;
+  width: 70px;
+  border-radius: 4px;
+  margin: 4px;
+  cursor: not-allowed;
+}
+#clock-reset.enabled{
+  color: red;
+  background-color: #eeee11;
+  border: 1px solid red;
+  cursor: pointer;
+}
+
+#pomodoro-label {
+  background-color: #1111aa;
+}
+#break-label {
+  background-color: #aa11aa;
+}
+
