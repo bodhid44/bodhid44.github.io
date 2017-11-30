@@ -5,21 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fCC - JS Calculator</title>
 
-    <!--SEMANTIC UI-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--LOCAL CSS-->
     <link rel="stylesheet" type="text/css" href="./jscalc.css" >
   </head>
 
   <body>
-    <div id="main-container" class="ui container">
-    
+    <p class="grid-message">You need a browser that supports CSS Grid Layout to see this page properly!</p>
+    <p class="aim">This is page intended to be HTML/CSS/Javascript reproduction the basic mode of the <a href="https://wiki.gnome.org/Apps/Calculator">'GNOME Calculator'</a> (gcalctool).</p>
+    <div class="grid">
+      <div class="display">
+        <div id="history-div" class="history">
+        </div>
+        <div class="line">
+          <p id="calc-line" class="line"></p>
+          <p id="error-message" class="error-message">Malformed expression</p>
+        </div>
+      </div>
+      <div class="key" data-key="7">7</div>
+      <div class="key" data-key="8">8</div>
+      <div class="key" data-key="9">9</div>
+      <div class="key divide" title="Divide [/]">&divide;</div>
+      <div class="key delete" title="Undo [Ctrl+Z]">&#8617;</div>
+      <div class="key clear" title="Clear Display [Escape]">&#9003;</div>
+      <div class="key" data-key="4">4</div>
+      <div class="key" data-key="5">5</div>
+      <div class="key" data-key="6">6</div>
+      <div class="key times" title="Multiply [*]">&times;</div>
+      <div class="key" data-key="(" title="Start Group [(]">(</div>
+      <div class="key" data-key=")" title="End Group [)]">)</div>
+      <div class="key" data-key="1">1</div>
+      <div class="key" data-key="2">2</div>
+      <div class="key" data-key="3">3</div>
+      <div class="key minus" title="Subtract [-]">&minus;</div>
+      <div class="key square" title="Square [Ctrl+2]">x&#178;</div>
+      <div class="key sqroot" title="Square Root [Ctrl+R]">&radic;</div>
+      <div class="key" data-key="0">0</div>
+      <div class="key" data-key="." >.</div>
+      <div class="key percent" title="Percentage [%]">&percnt;</div>
+      <div class="key plus" title="Add [+]">&plus;</div>
+      <div class="key equals" title="Calculate Result">&equals;</div>
     </div>
 
-    <!--jQuery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--    SEMANTIC UI-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
     <!--LOCAL JS-->
     <script src="./jscalc.js"></script>
   </body>

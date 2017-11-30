@@ -1,0 +1,100 @@
+* { box-sizing: border-box;}
+body {
+  font-family: 'Lato', sans-serif;
+}
+@supports(display: grid){
+  .grid-message {
+    display: none;
+  }
+}
+.grid-message {
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+}
+.aim {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: #555;
+}
+.grid {
+  width: 320px;  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  margin: auto;
+  background-color: #f4f4f4;
+  justify-items: center;
+  align-items: center;
+  padding: 5px;
+  border: solid 3px #66c;
+  border-radius: 10px;
+}
+.grid div.display{
+  grid-column: 1 / 7;
+  justify-self: stretch;
+  align-self: stretch;
+  border: 2px solid #c3c3c3;
+}
+.grid div.history {
+  height: 160px;
+  background-color: #f4f4f4;
+  padding: 2px;
+  border-bottom: 1px solid #c3c3c3;
+  overflow-y: auto;
+}
+.grid div.history > div {
+  margin: 0 2px 2px 1px;
+  text-align: left;
+  font-size: 0.8rem;
+  clear: both;
+  display: block;
+  width: 100%;
+}
+.grid div.history .history-line {
+  display: inline;
+  float: left;
+  color: #777;
+  max-width: 230px;
+  overflow:hidden;
+}
+.grid div.history .history-result{
+  display: inline;
+  float: right;
+  color: #000;
+  width: 55px;
+  overflow:hidden;
+}
+.grid  div.line{
+  height: 40px;
+  background-color: #fcfcfc;
+  padding: 3px;
+  border: none;
+  overflow:hidden;
+}
+p.line {
+  padding-bottom: 1px;
+  line-height: 0.8rem;
+  margin: 9px 2px 2px 1px;
+  text-align: right;
+  font-size: 1.2rem;
+}
+p.error-message {
+  margin: 0 2px;
+  font-size: 0.6rem;
+  color: red;
+  text-align: right
+}
+.grid div.key{
+  min-width: 43px;
+  padding: 4px;
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(33, 33, 33, 0.1), 0 3px 5px 0 rgba(33, 33, 33, 0.09);
+  text-align: center;
+  cursor: pointer;
+}
+.grid div.key.equals{
+  grid-column: 5 / 7;
+  min-width: 96px;
+}
