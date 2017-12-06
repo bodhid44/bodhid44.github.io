@@ -5,21 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fCC - Simon Game</title>
 
-    <!--SEMANTIC UI-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
     <!--LOCAL CSS-->
     <link rel="stylesheet" type="text/css" href="./simon.css" >
   </head>
 
   <body>
-    <div id="main-container" class="ui container">
-    
+    <div id="game-name">
+      <img src="../images/simon.png" >
+    </div>
+    <div class="segment-container">
+      <div id="seg1" data-segment="1" class="segment seg1 disable"></div>
+      <div id="seg2" data-segment="2" class="segment seg2 disable"></div>
+    </div>
+    <div class="segment-container">
+      <div id="seg3" data-segment="3" class="segment seg3 disable"></div>
+      <div id="seg4" data-segment="4" class="segment seg4 disable"></div>
+    </div>
+    <div class="button-container">
+      <div class="onoff-container">
+        <div id="off" class="onoff active" title="Click to turn off">OFF</div>
+        <div id="on" class="onoff" title="Click to turn on">ON</div>
+      </div>
+      <div class="controls-container">
+
+        <div id="start-game" class="control start" title="Click to start a new game">START</div>
+
+        <div>
+          <div class="gamestatus">
+            <div>-</div>
+            <div>-</div>
+          </div>
+        </div>
+
+        <div id="strict-mode" class="control strict" title="Click to toggle strict mode">STRICT</div>
+
+      </div>
     </div>
 
+
+
+    <audio id="audioseg1" class="seg" src="../images/simonSound1.mp3"></audio>
+    <audio id="audioseg2" class="seg" src="../images/simonSound2.mp3"></audio>
+    <audio id="audioseg3" class="seg" src="../images/simonSound3.mp3"></audio>
+    <audio id="audioseg4" class="seg" src="../images/simonSound4.mp3"></audio>
+    <audio id="erroraudio" src="../images/clunk.mp3"></audio>
     <!--jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--    SEMANTIC UI-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
     <!--LOCAL JS-->
     <script src="./simon.js"></script>
   </body>
